@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+<body> 
+<div class="login">
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<h1>AnoMLAI in claims</h1>
+  <form action="/predict" method="POST">
+        <label for="Beneficiary gender code">Beneficiary gender code</label>
+    	<input type="number" id="Beneficiary gender code" name="Beneficiary gender code" required="required" />
+        <br>
+        <label for="Beneficiary Age category code">Beneficiary Age category code</label>
+    	<input type="number" id="Beneficiary Age category code" name="Beneficiary Age category code" required="required" />
+        <br>
+        <label for="Base DRG code">Base DRG code</label>
+    	<input type="number" id="Base DRG code" name="Base DRG code" required="required" />
+        <br>
+        <label for="ICD9 primary procedure code">ICD9 primary procedure code</label>
+    	<input type="number" id="ICD9 primary procedure code" name="ICD9 primary procedure code" required="required" />
+        <br>
+        <label for="Inpatient days code">Inpatient days code</label>
+    	<input type="number" id="Inpatient days code" name="Inpatient days code" required="required" />
+        <br>
+        <label for="DRG quintile average payment amount">DRG quintile average payment amount</label>
+    	<input type="number" id="DRG quintile average payment amount" name="DRG quintile average payment amount" required="required" />
+        <br>
+        <label for="DRG quintile payment amount code">DRG quintile payment amount code</label>
+    	<input type="number" id="DRG quintile payment amount code" name="DRG quintile payment amount code" required="required" />
+        <br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+  </form>
+</div>
+</body>
+</html>
+
+
+
+
